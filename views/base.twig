@@ -1,0 +1,33 @@
+{% block html_head_container %}
+{% include 'html-header.twig' %}
+	{% block head %}
+	{% endblock %}
+	</head>
+{% endblock %}
+	<body class="body" data-template="base.twig">
+		{{ function('wp_body_open') }}
+		<div class="body__inner">
+				<header class="header" >
+				{% block header %}
+					<div class="container">
+						<div class="header__inner">
+							<a class="logo" href="{{site.url}}">
+									This is logo
+							</a>
+						</div>
+					</div>
+				{% endblock %}
+			</header>
+			<main class="main">
+				<div class="container">
+					{% block content %}
+						Sorry, no content
+					{% endblock %}
+				</div>
+			</main>
+				{% block footer %}
+				{% include 'footer.twig' %}
+				{% endblock %}
+		</div>
+	</body>
+</html>

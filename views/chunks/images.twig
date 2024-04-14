@@ -1,0 +1,23 @@
+<section class="section">
+  <div class="container">
+      {% if images_title  %}
+      <h2 class="title section__title">{{images_title}}</h2>
+      {% endif %}
+      {% if images_description  %}
+      <div class="text section__description">{{images_description}}</div>
+      {% endif %}
+      <div class="section__inner">
+        <div class="swiper images-slider">
+                <div class="swiper-wrapper">
+                  {% for image in images %}
+                      <div class="swiper-slide images-slider__slide">
+                        <img src="{{image}}" alt="test"> 
+                      </div>
+                  {% endfor %}
+                </div>
+                <div class="swiper-button-next"></div>
+                <div class="swiper-button-prev"></div>
+            </div>
+      </div>
+  </div>
+</section>

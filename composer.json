@@ -1,0 +1,12 @@
+{
+  "require": {
+    "timber/timber": "2.x-dev",
+    "unsplash/unsplash": "^3.2"
+   
+  },
+  "config": {
+    "allow-plugins": {
+      "composer/installers": true
+    }
+  }
+}
